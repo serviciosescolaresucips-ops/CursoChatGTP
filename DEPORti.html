@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEPORti | Pasión Tricolor - Especial Mundial 2026</title>
+    <style>
+        /* --- PALETA DE COLORES INTENSA Y ULTRA VIBRANTE --- */
+        :root {
+            --verde-intenso: #008744;
+            --verde-brillante: #00ff6c;
+            --rojo-pasion: #d61a3c;
+            --rojo-neon: #ff2a4b;
+            --azul-marino-intenso: #06192e;
+            --azul-electrico: #0052cc;
+            --dorado-brillante: #ffcc00;
+            --naranja-fuego: #ff6a00;
+            --blanco-puro: #ffffff;
+            --fondo-gradiente: linear-gradient(135deg, #051424 0%, #0c2a4a 50%, #06192e 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: var(--fondo-gradiente);
+            color: var(--blanco-puro);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        header {
+            background: linear-gradient(180deg, rgba(6, 25, 46, 0.95) 0%, rgba(12, 42, 74, 0.9) 100%);
+            border-bottom: 4px solid var(--dorado-brillante);
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-area img {
+            height: 80px;
+            width: auto;
+            filter: drop-shadow(0px 0px 8px rgba(255, 204, 0, 0.5));
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: var(--blanco-puro);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav ul li a:hover {
+            color: var(--verde-brillante);
+            text-shadow: 0 0 10px var(--verde-brillante);
+        }
+
+        .mex-badge {
+            background: linear-gradient(90deg, var(--verde-intenso), var(--rojo-pasion));
+            color: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 900;
+            box-shadow: 0 0 15px var(--rojo-neon);
+            border: 2px solid var(--dorado-brillante);
+            letter-spacing: 1px;
+        }
+
+        /* --- SECCIÓN CENTRAL (HERO) EXPLOSIÓN DE COLOR --- */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 135, 68, 0.8) 0%, rgba(6, 25, 46, 0.7) 50%, rgba(214, 26, 60, 0.7) 100%), 
+                        url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920') no-repeat center center/cover;
+            padding: 140px 5%;
+            text-align: center;
+            position: relative;
+            border-bottom: 6px solid var(--rojo-pasion);
+            box-shadow: inset 0 0 150px rgba(0,0,0,0.9);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 1.1;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 255, 108, 0.7);
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--dorado-brillante), var(--naranja-fuego), var(--rojo-neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            font-weight: 600;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+            color: #ffffff;
+        }
+
+        .hero-btn {
+            background: linear-gradient(90deg, var(--verde-brillante) 0%, var(--azul-electrico) 100%);
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 30px rgba(0, 255, 108, 0.5);
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            border: 3px solid var(--blanco-puro);
+        }
+
+        .hero-btn:hover {
+            transform: scale(1.08) translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0, 82, 204, 0.8);
+            background: linear-gradient(90deg, var(--naranja-fuego) 0%, var(--rojo-neon) 100%);
+        }
+
+        /* --- CONTENEDORES --- */
+        .container {
+            max-width: 1250px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            color: var(--blanco-puro);
+            margin-bottom: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--verde-intenso), var(--dorado-brillante), var(--rojo-pasion));
+            margin: 15px auto 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--dorado-brillante);
+        }
+
+        /* --- BLOQUE MULTICOLOR MUNDIAL 2026 --- */
+        .mundial-banner {
+            background: linear-gradient(135deg, rgba(12, 42, 74, 0.95), rgba(6, 25, 46, 0.95));
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            border: 3px solid var(--verde-intenso);
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .mundial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .mundial-fact {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .mundial-fact:hover {
+            transform: translateY(-8px);
+            border-color: var(--dorado-brillante);
+            background: rgba(255, 204, 0, 0.05);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+        }
+
+        .mundial-fact h4 {
+            background: linear-gradient(90deg, var(--verde-brillante), var(--dorado-brillante));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .mundial-fact p {
+            font-weight: 600;
+            color: #e0e6ed;
+        }
+
+        /* --- HISTORIA Y DT --- */
+        .grid-two-cols {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 35px;
+            margin-bottom: 70px;
+        }
+
+        .card-info {
+            background: linear-gradient(135deg, var(--verde-intenso) 0%, rgba(5,20,36,0.9) 100%);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border: 2px solid var(--verde-brillante);
+        }
+
+        .card-info.rojo {
+            background: linear-gradient(135deg, var(--rojo-pasion) 0%, rgba(5,20,36,0.9) 100%);
+            border: 2px solid var(--rojo-neon);
+        }
+
+        .card-info h3 {
+            color: var(--blanco-puro);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* --- TABLA DE ESTADÍSTICAS COLORIDA --- */
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(12, 42, 74, 0.6);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            margin-bottom: 70px;
+            border: 2px solid rgba(255,255,255,0.05);
+        }
+
+        .stats-table th {
+            background: linear-gradient(90deg, var(--verde-intenso), var(--azul-electrico), var(--rojo-pasion));
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .stats-table td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-weight: 600;
+            color: #f0f4f8;
+        }
+
+        .stats-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        /* --- GALERÍA DE PLANTILLA NEÓN --- */
+        .players-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 70px;
+        }
+
+        .player-card {
+            background: linear-gradient(180deg, #102e4e 0%, #06192e 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 2px solid rgba(255,255,255,0.05);
+        }
+
+        .player-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--verde-brillante);
+            box-shadow: 0 15px 35px rgba(0, 255, 108, 0.3);
+        }
+
+        .player-img-container {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .player-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(1.1) brightness(1.05);
+            transition: transform 0.5s ease;
+        }
+
+        .player-card:hover .player-img {
+            transform: scale(1.1);
+        }
+
+        .player-info {
+            padding: 20px;
+            border-top: 3px solid var(--dorado-brillante);
+        }
+
+        .player-info h4 {
+            color: var(--blanco-puro);
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+            font-weight: 800;
+        }
+
+        .player-info span {
+            color: var(--verde-brillante);
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        /* --- LEYENDAS HISTÓRICAS --- */
+        .historicos-section {
+            background: linear-gradient(135deg, #0e2a4a 0%, var(--azul-marino-intenso) 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 70px;
+            border: 3px solid var(--dorado-brillante);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        .historicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .hist-card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .hist-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--rojo-neon);
+            transform: scale(1.02);
+        }
+
+        .hist-card h4 {
+            color: var(--dorado-brillante);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        /* --- TIENDA DE PORTIVOS VIBRANTE --- */
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-bottom: 70px;
+        }
+
+        .product-card {
+            background: linear-gradient(180deg, #102e4e 0%, #06192e 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--naranja-fuego);
+            box-shadow: 0 15px 35px rgba(255, 106, 0, 0.3);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .product-details h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--blanco-puro);
+            font-weight: 800;
+        }
+
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--verde-brillante);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 255, 108, 0.3);
+        }
+
+        .btn-buy {
+            display: inline-block;
+            width: 100%;
+            background: linear-gradient(90deg, var(--naranja-fuego), var(--rojo-pasion));
+            color: white;
+            padding: 14px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-buy:hover {
+            background: linear-gradient(90deg, var(--verde-brillante), #00b354);
+            box-shadow: 0 0 15px var(--verde-brillante);
+            transform: translateY(-2px);
+        }
+
+        /* --- PIE DE PÁGINA CON LOGOTIPO --- */
+        footer {
+            background: linear-gradient(180deg, #06192e 0%, #030d18 100%);
+            color: white;
+            padding: 60px 5% 30px 5%;
+            text-align: center;
+            border-top: 5px solid var(--dorado-brillante);
+            box-shadow: 0 -10px 35px rgba(0,0,0,0.5);
+        }
+
+        .footer-logo img {
+            height: 95px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0px 0px 10px rgba(255, 204, 0, 0.4));
+        }
+
+        .footer-text {
+            font-size: 1.1rem;
+            color: #a0aec0;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .mex-colors-bar {
+            display: flex;
+            height: 10px;
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.8);
+        }
+        .bar-v { background-color: var(--verde-intenso); flex: 1; }
+        .bar-b { background-color: var(--blanco-puro); flex: 1; }
+        .bar-r { background-color: var(--rojo-pasion); flex: 1; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 20px; }
+            .grid-two-cols { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA PRINCIPAL CON TU LOGO DEPORti -->
+    <header>
+        <div class="logo-area">
+            <img src="DEPORti.png_3.png" alt="DEPORti Logo Oficial">
+            <span class="mex-badge">EDICIÓN MUNDIALISTA 🇲🇽</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#mundial2026">Mundial 2026</a></li>
+                <li><a href="#trayectoria">Historia</a></li>
+                <li><a href="#plantilla">Plantilla</a></li>
+                <li><a href="#tienda">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER CENTRAL ELECTRIZANTE -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MÉXICO EN EL ESCENARIO <span>MUNDIAL</span></h1>
+            <p>Viste la armadura del orgullo nacional. Explora la historia de la Selección Mexicana y consigue tu equipamiento oficial de alta gama en DEPORti.</p>
+            <a href="#tienda" class="hero-btn">¡CONSIGUE TU JERSEY AQUÍ!</a>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <!-- DATOS RELEVANTES MUNDIAL 2026 -->
+        <section id="mundial2026" class="mundial-banner">
+            <h2 class="section-title">Datos Clave: Mundial 2026</h2>
+            <p style="text-align: center; max-width: 850px; margin: 0 auto 25px auto; font-size: 1.2rem; font-weight: 600; color: #cbd5e0;">La mayor cita futbolística de la historia llega con una explosión de color, sedes monumentales y un formato revolucionario.</p>
+            <div class="mundial-grid">
+                <div class="mundial-fact">
+                    <h4>48</h4>
+                    <p>Naciones unidas compitiendo en el torneo más grande jamás creado.</p>
+                </div>
+                <div class="mundial-fact">
+                    <h4>3</h4>
+                    <p>Gigantes organizadores en conjunto: México, Estados Unidos y Canadá.</p>
+                </div>
+                <div class="mundial-fact">
+                    <h4>3ra Vez</h4>
+                    <p>México hace historia única como el único país en organizar tres Mundiales.</p>
+                </div>
+                <div class="mundial-fact">
+                    <h4>Azteca</h4>
+                    <p>El legendario Coloso de Santa Úrsula recibirá el gran partido de inauguración.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAYECTORIA Y CUERPO TÉCNICO -->
+        <div class="grid-two-cols" id="trayectoria">
+            <div class="card-info">
+                <h3>Trayectoria Incomparable</h3>
+                <p>La Selección Mexicana de Fútbol representa el alma de una nación entera sobre el terreno de juego. Con un palmarés dorado que incluye el dominio absoluto de la Copa Oro de la Concacaf y la gloria mundial de la Copa Confederaciones 1999, el Tri ha demostrado su jerarquía indiscutible ante los mejores combinados del mundo.</p>
+            </div>
+            
+            <div class="card-info rojo">
+                <h3>Estrategia de Vanguardia</h3>
+                <p>La dirección técnica de la escuadra nacional ejecuta un proyecto sólido enfocado en el fútbol de alta intensidad. Con un esquema dinámico y vertical, el cuerpo técnico trabaja en potenciar el talento de los nuevos referentes mexicanos combinándolos con la experiencia internacional europea.</p>
+            </div>
+        </div>
+
+        <!-- TABLA DE RANKING DE JUEGOS GANADOS -->
+        <section>
+            <h2 class="section-title">Historial y Juegos Ganados</h2>
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th>Torneo Oficial</th>
+                        <th>Partidos Ganados</th>
+                        <th>Rendimiento</th>
+                        <th>Logro Máximo Destacado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Copa Oro de la Concacaf</td>
+                        <td>Más de 80 partidos</td>
+                        <td>82%</td>
+                        <td>Rey Absoluto de la Confederación</td>
+                    </tr>
+                    <tr>
+                        <td>Copa América (Invitado)</td>
+                        <td>19 partidos</td>
+                        <td>48%</td>
+                        <td>Dos veces Subcampeón del Continente (1993, 2001)</td>
+                    </tr>
+                    <tr>
+                        <td>Copa FIFA Confederaciones</td>
+                        <td>11 partidos</td>
+                        <td>55%</td>
+                        <td>Campeón Invicto Histórico (1999)</td>
+                    </tr>
+                    <tr>
+                        <td>Copas del Mundo de la FIFA</td>
+                        <td>16 partidos</td>
+                        <td>38%</td>
+                        <td>Cuartos de Final Mundiales (1970, 1986)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- PLANTILLA ACTUAL CON FOTOS DE JUGADORES -->
+        <section id="plantilla">
+            <h2 class="section-title">Nuestros Guerreros Actuales</h2>
+            <div class="players-grid">
+                <!-- Jugador 1 -->
+                <div class="player-card">
+                    <div class="player-img-container">
+                        <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=400" alt="Santiago Giménez" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h4>Santiago Giménez</h4>
+                        <span>Delantero / Rompedor de Redes</span>
+                    </div>
+                </div>
+                <!-- Jugador 2 -->
+                <div class="player-card">
+                    <div class="player-img-container">
+                        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=400" alt="Edson Álvarez" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h4>Edson Álvarez</h4>
+                        <span>Mediocampista / Capitán de Hierro</span>
+                    </div>
+                </div>
+                <!-- Jugador 3 -->
+                <div class="player-card">
+                    <div class="player-img-container">
+                        <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=400" alt="Luis Chávez" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h4>Luis Chávez</h4>
+                        <span>Mediocampista / Motor Táctico</span>
+                    </div>
+                </div>
+                <!-- Jugador 4 -->
+                <div class="player-card">
+                    <div class="player-img-container">
+                        <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=400" alt="César Montes" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h4>César Montes</h4>
+                        <span>Defensa / La Muralla Azteca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEYENDAS HISTÓRICAS DE LA SELECCIÓN -->
+        <section class="historicos-section">
+            <h2 class="section-title">Leyendas Inmortales del Tri</h2>
+            <div class="historicos-grid">
+                <div class="hist-card">
+                    <h4>Hugo Sánchez</h4>
+                    <p>Referente legendario del área, conquistador absoluto de Europa con cinco trofeos Pichichi y el delantero más letal en la historia del fútbol mexicano.</p>
+                </div>
+                <div class="hist-card">
+                    <h4>Rafael Márquez</h4>
+                    <p>El elegante "Káiser" de Michoacán, líder histórico de la zaga y leyenda global al comandar a la Selección Mexicana en cinco Copas del Mundo.</p>
+                </div>
+                <div class="hist-card">
+                    <h4>Cuauhtémoc Blanco</h4>
+                    <p>El genio impredecible y más amado por la afición. Dueño de una inventiva legendaria, garra indomable y creador de la famosa 'Cuauhtemiña'.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIENDA COMPLETA CON PRODUCTOS DEPORTIVOS DEPORti -->
+        <section id="tienda">
+            <h2 class="section-title">Viste los Colores de la Pasión en DEPORti</h2>
+            <div class="shop-grid">
+                <!-- Jersey Local -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=500" alt="Jersey Local México" class="product-img">
+                    <div class="product-details">
+                        <h4>Jersey Oficial México Local</h4>
+                        <div class="product-price">$84.99</div>
+                        <a href="#" class="btn-buy">Comprar Ahora</a>
+                    </div>
+                </div>
+                <!-- Jersey Visitante -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=500" alt="Jersey Visitante México" class="product-img">
+                    <div class="product-details">
+                        <h4>Jersey Oficial México Visitante</h4>
+                        <div class="product-price">$84.99</div>
+                        <a href="#" class="btn-buy">Comprar Ahora</a>
+                    </div>
+                </div>
+                <!-- Pants Concentración -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=500" alt="Pants Selección Mexicana" class="product-img">
+                    <div class="product-details">
+                        <h4>Pants de Concentración Pro</h4>
+                        <div class="product-price">$59.99</div>
+                        <a href="#" class="btn-buy">Comprar Ahora</a>
+                    </div>
+                </div>
+                <!-- Sudadera Oficial -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1511406597660-2e59fa235db6?q=80&w=500" alt="Sudadera DEPORti México" class="product-img">
+                    <div class="product-details">
+                        <h4>Sudadera DEPORti Training</h4>
+                        <div class="product-price">$64.99</div>
+                        <a href="#" class="btn-buy">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL CON LOGO -->
+    <footer>
+        <div class="footer-logo">
+            <img src="DEPORti.png_3.png" alt="DEPORti Logo de Pie de Página">
+        </div>
+        <p class="footer-text">DEPORti © 2026 - Distribuidor élite de equipamiento deportivo de fútbol y orgullo de la afición.</p>
+        
+        <div class="mex-colors-bar">
+            <div class="bar-v"></div>
+            <div class="bar-b"></div>
+            <div class="bar-r"></div>
+        </div>
+    </footer>
+
+</body>
+</html>
