@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fútbol Mundial - Apuestas FIFA 2026</title>
+    <!-- Tailwind CSS para un estilizado moderno de alta gama -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customDarkBg: '#090d16', // Negro cósmico/azul profundo del fondo del logo
+                        customCardBg: '#111827', // Gris/azul oscuro para los contenedores
+                        neonBlue: '#00d2ff',     // El azul neón eléctrico brillante del logo
+                        goldPremium: '#d4af37',  // El dorado metálico de la corona y las estrellas
+                        goldHover: '#f3cd44'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* REQUERIMIENTO: Agregar el logo en el fondo de la página de forma elegante */
+        body {
+            background-image: linear-gradient(to bottom, rgba(9, 13, 22, 0.93), rgba(17, 24, 39, 0.97)), url('6b1d81a3.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="text-white font-sans selection:bg-neonBlue selection:text-customDarkBg">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="bg-customCardBg/90 backdrop-blur-md border-b border-neonBlue/20 sticky top-0 z-50 px-4 lg:px-8 py-3 shadow-2xl">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- REQUERIMIENTO: Logo agregado en la parte superior izquierda -->
+            <div class="flex items-center gap-3">
+                <img src="6b1d81a3.png" alt="Futbol Mundial Logo" class="h-16 w-auto object-contain drop-shadow-[0_0_12px_rgba(0,210,255,0.4)]">
+            </div>
+
+            <!-- Menú del Sitio -->
+            <nav class="hidden lg:flex items-center gap-6 text-xs md:text-sm font-semibold uppercase tracking-wider">
+                <a href="#inicio" class="text-neonBlue border-b-2 border-neonBlue pb-1">Inicio</a>
+                <a href="#apuestas" class="hover:text-neonBlue transition-colors">Apuestas en Vivo</a>
+                <a href="#artesanias" class="hover:text-goldPremium transition-colors flex items-center gap-1"><i class="fa-solid fa-basket-shopping"></i> Artesanías MX</a>
+                <a href="#donaciones" class="hover:text-neonBlue transition-colors flex items-center gap-1"><i class="fa-solid fa-hand-holding-heart"></i> Casas Hogares</a>
+                <a href="#contacto" class="hover:text-goldPremium transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Acciones -->
+            <div class="flex items-center gap-4">
+                <button class="bg-gradient-to-r from-goldPremium to-goldHover text-customDarkBg font-black px-6 py-2.5 rounded-lg text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:scale-105 transition-all duration-200">
+                    Registrarse
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative py-24 px-4 text-center overflow-hidden">
+        <!-- Brillo de neón de fondo -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neonBlue/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="text-goldPremium font-bold tracking-widest uppercase text-xs bg-goldPremium/10 px-3 py-1 rounded-full border border-goldPremium/30">
+                Mundial FIFA 2026
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black mt-4 mb-6 tracking-tight uppercase">
+                UN SOLO MUNDO, <br class="md:hidden"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-white to-goldPremium">UNA SOLA PASIÓN</span>
+            </h1>
+            <p class="text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+                La plataforma de apuestas más vibrante de la Copa del Mundo. Multiplica tu emoción, consume el arte local mexicano y deja una huella social con cada jugada.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#apuestas" class="bg-neonBlue text-customDarkBg font-extrabold px-8 py-4 rounded-lg shadow-[0_0_20px_rgba(0,210,255,0.4)] hover:bg-white transition-all transform hover:-translate-y-1 text-sm tracking-wider uppercase">
+                    Apostar en Vivo
+                </a>
+                <a href="#artesanias" class="border border-gray-600 hover:border-goldPremium px-8 py-4 rounded-lg font-bold transition-all text-sm uppercase tracking-wider">
+                    Productos Mexicanos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE APUESTAS & BANDERAS DE TODO EL MUNDO -->
+    <section id="apuestas" class="max-w-7xl mx-auto px-4 lg:px-8 py-16">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b border-gray-800 pb-4">
+            <div>
+                <h2 class="text-2xl font-black tracking-tight flex items-center gap-2 uppercase">
+                    <i class="fa-solid fa-flag text-neonBlue"></i> Cuotas Mundiales
+                </h2>
+                <p class="text-gray-400 text-sm mt-1">Imágenes de las banderas de todo el mundo en competencia directa.</p>
+            </div>
+            <span class="text-xs text-goldPremium font-mono uppercase tracking-widest mt-2 md:mt-0 bg-goldPremium/10 px-3 py-1 rounded border border-goldPremium/20">Fase de Grupos 2026</span>
+        </div>
+
+        <!-- Grid de banderas internacionales usando FlagCDN en alta definición -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- México -->
+            <div class="bg-customCardBg/80 backdrop-blur-sm p-4 rounded-xl border-2 border-neonBlue/60 hover:border-goldPremium transition-all text-center group cursor-pointer shadow-xl">
+                <img src="https://flagcdn.com/w160/mx.png" alt="México" class="h-12 w-20 object-cover mx-auto rounded shadow-md group-hover:scale-105 transition-transform">
+                <p class="mt-3 font-bold text-sm">México</p>
+                <span class="text-xs text-goldPremium font-mono mt-1 block font-bold">Cuota: +7.50</span>
+            </div>
+            <!-- Estados Unidos -->
+            <div class="bg-customCardBg/80 backdrop-blur-sm p-4 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-all text-center group cursor-pointer">
+                <img src="https://flagcdn.com/w160/us.png" alt="EEUU" class="h-12 w-20 object-cover mx-auto rounded shadow-md group-hover:scale-105 transition-transform">
+                <p class="mt-3 font-semibold text-sm text-gray-300">Estados Unidos</p>
+                <span class="text-xs text-neonBlue font-mono mt-1 block">Cuota: +9.00</span>
+            </div>
+            <!-- Brasil -->
+            <div class="bg-customCardBg/80 backdrop-blur-sm p-4 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-all text-center group cursor-pointer">
+                <img src="https://flagcdn.com/w160/br.png" alt="Brasil" class="h-12 w-20 object-cover mx-auto rounded shadow-md group-hover:scale-105 transition-transform">
+                <p class="mt-3 font-semibold text-sm text-gray-300">Brasil</p>
+                <span class="text-xs text-neonBlue font-mono mt-1 block">Cuota: +4.50</span>
+            </div>
+            <!-- España -->
+            <div class="bg-customCardBg/80 backdrop-blur-sm p-4 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-all text-center group cursor-pointer">
+                <img src="https://flagcdn.com/w160/es.png" alt="España" class="h-12 w-20 object-cover mx-auto rounded shadow-md group-hover:scale-105 transition-transform">
+                <p class="mt-3 font-semibold text-sm text-gray-300">España</p>
+                <span class="text-xs text-neonBlue font-mono mt-1 block">Cuota: +6.00</span>
+            </div>
+            <!-- Argentina -->
+            <div class="bg-customCardBg/80 backdrop-blur-sm p-4 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-all text-center group cursor-pointer">
+                <img src="https://flagcdn.com/w160/ar.png" alt="Argentina" class="h-12 w-20 object-cover mx-auto rounded shadow-md group-hover:scale-105 transition-transform">
+                <p class="mt-3 font-semibold text-sm text-gray-300">Argentina</p>
+                <span class="text-xs text-neonBlue font-mono mt-1 block">Cuota: +5.00</span>
+            </div>
+            <!-- Alemania -->
+            <div class="bg-customCardBg/80 backdrop-blur-sm p-4 rounded-xl border border-gray-800 hover:border-neonBlue/50 transition-all text-center group cursor-pointer">
+                <img src="https://flagcdn.com/w160/de.png" alt="Alemania" class="h-12 w-20 object-cover mx-auto rounded shadow-md group-hover:scale-105 transition-transform">
+                <p class="mt-3 font-semibold text-sm text-gray-300">Alemania</p>
+                <span class="text-xs text-neonBlue font-mono mt-1 block">Cuota: +8.50</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTADO: PRODUCTOS ARTESANALES DE MÉXICO -->
+    <section id="artesanias" class="bg-customCardBg/60 backdrop-blur-md py-16 border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-neonBlue uppercase tracking-widest bg-neonBlue/10 px-3 py-1 rounded-full border border-neonBlue/30">Orgullo Hecho a Mano</span>
+                <h2 class="text-3xl font-black mt-3 uppercase tracking-tight">Artesanías Mexicanas en Apoyo al País</h2>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto mt-2">Impulsamos el sustento de las familias y etnias originarias de México. Cada compra distribuye ganancias equitativas directas a los talleres creadores.</p>
+            </div>
+
+            <!-- Grid de Muestra de Productos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Producto 1 -->
+                <div class="bg-customDarkBg/90 rounded-2xl border border-gray-800 overflow-hidden hover:border-goldPremium transition-all shadow-xl group flex flex-col justify-between">
+                    <div class="p-6 bg-black/40 h-52 flex items-center justify-center relative">
+                        <i class="fa-solid fa-jar text-6xl text-orange-400 drop-shadow-[0_0_15px_rgba(251,146,60,0.3)]"></i>
+                        <span class="absolute bottom-3 left-3 bg-neonBlue/20 text-neonBlue text-[10px] font-bold px-2 py-0.5 rounded border border-neonBlue/30">Oaxaca</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold group-hover:text-goldPremium transition-colors">Vajilla de Barro Negro Auténtica</h3>
+                        <p class="text-gray-400 text-xs mt-1">Modelado e incinerado tradicional en hornos subterráneos por maestros alfareros.</p>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-xl font-mono font-bold text-goldPremium">$480 MXN</span>
+                            <button class="bg-neonBlue hover:bg-white text-customDarkBg text-xs font-extrabold px-4 py-2 rounded-lg transition-colors uppercase">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="bg-customDarkBg/90 rounded-2xl border border-gray-800 overflow-hidden hover:border-goldPremium transition-all shadow-xl group flex flex-col justify-between">
+                    <div class="p-6 bg-black/40 h-52 flex items-center justify-center relative">
+                        <i class="fa-solid fa-horse text-6xl text-purple-400 drop-shadow-[0_0_15px_rgba(192,132,252,0.3)]"></i>
+                        <span class="absolute bottom-3 left-3 bg-neonBlue/20 text-neonBlue text-[10px] font-bold px-2 py-0.5 rounded border border-neonBlue/30">Guerrero</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold group-hover:text-goldPremium transition-colors">Alebrije Tallado en Madera de Copal</h3>
+                        <p class="text-gray-400 text-xs mt-1">Pintado meticulosamente a mano con patrones místicos de la cultura local.</p>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-xl font-mono font-bold text-goldPremium">$1,350 MXN</span>
+                            <button class="bg-neonBlue hover:bg-white text-customDarkBg text-xs font-extrabold px-4 py-2 rounded-lg transition-colors uppercase">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="bg-customDarkBg/90 rounded-2xl border border-gray-800 overflow-hidden hover:border-goldPremium transition-all shadow-xl group flex flex-col justify-between">
+                    <div class="p-6 bg-black/40 h-52 flex items-center justify-center relative">
+                        <i class="fa-solid fa-rug text-6xl text-teal-400 drop-shadow-[0_0_15px_rgba(45,212,191,0.3)]"></i>
+                        <span class="absolute bottom-3 left-3 bg-neonBlue/20 text-neonBlue text-[10px] font-bold px-2 py-0.5 rounded border border-neonBlue/30">Puebla</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold group-hover:text-goldPremium transition-colors">Camino de Mesa con Bordado Tenango</h3>
+                        <p class="text-gray-400 text-xs mt-1">Hilado fino multicolor sobre mantas naturales de algodón de alta resistencia.</p>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-xl font-mono font-bold text-goldPremium">$920 MXN</span>
+                            <button class="bg-neonBlue hover:bg-white text-customDarkBg text-xs font-extrabold px-4 py-2 rounded-lg transition-colors uppercase">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTADO: DONACIONES A CASAS HOGARES DE MÉXICO -->
+    <section id="donaciones" class="max-w-7xl mx-auto px-4 lg:px-8 py-16">
+        <div class="bg-gradient-to-br from-customCardBg via-customDarkBg to-black/80 rounded-3xl border border-neonBlue/30 p-8 md:p-12 shadow-2xl relative overflow-hidden backdrop-blur-sm">
+            <div class="max-w-3xl">
+                <span class="text-neonBlue text-xs uppercase font-extrabold tracking-widest bg-neonBlue/10 px-3 py-1 rounded-full border border-neonBlue/30">Compromiso Comunitario</span>
+                <h2 class="text-3xl md:text-4xl font-black mt-4 mb-4 uppercase tracking-tight">Donaciones a Casas Hogares del País</h2>
+                <p class="text-gray-300 text-sm md:text-base mb-8 leading-relaxed">
+                    Creemos firmemente en generar un impacto positivo permanente. Por ello, una parte de las utilidades generadas por esta casa de apuestas durante el transcurso del Mundial 2026 se destina de forma auditada y directa a equipar, abastecer y dar educación de calidad a **diversas Casas Hogares del país de México**.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-black/40 p-4 rounded-xl border border-gray-800 hover:border-neonBlue/30 transition-colors">
+                        <p class="text-xs text-gray-400 font-bold">Aporte Alimentario</p>
+                        <p class="text-xl font-mono font-black text-white mt-1">$150 MXN</p>
+                        <button class="text-xs text-neonBlue underline mt-2 block font-bold hover:text-white">Donar Directo</button>
+                    </div>
+                    <div class="bg-black/40 p-4 rounded-xl border border-gray-800 hover:border-neonBlue/30 transition-colors">
+                        <p class="text-xs text-gray-400 font-bold">Kit Escolar Completo</p>
+                        <p class="text-xl font-mono font-black text-white mt-1">$400 MXN</p>
+                        <button class="text-xs text-neonBlue underline mt-2 block font-bold hover:text-white">Donar Directo</button>
+                    </div>
+                    <div class="bg-black/40 p-4 rounded-xl border border-gray-800 hover:border-neonBlue/30 transition-colors">
+                        <p class="text-xs text-gray-400 font-bold">Salud e Infraestructura</p>
+                        <p class="text-xl font-mono font-black text-white mt-1">$800 MXN</p>
+                        <button class="text-xs text-neonBlue underline mt-2 block font-bold hover:text-white">Donar Directo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTADO: CONTACTO (CON DATOS REQUERIDOS) -->
+    <section id="contacto" class="bg-black/40 py-16 border-t border-gray-800 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- REQUERIMIENTO: Datos institucionales provistos explícitamente -->
+                <div>
+                    <span class="text-xs font-bold text-neonBlue uppercase tracking-widest block mb-2">Canal de Comunicación</span>
+                    <h2 class="text-3xl font-black uppercase tracking-tight mb-6">Atención y Soporte</h2>
+                    <p class="text-gray-400 text-sm mb-8">Si tienes dudas sobre tus transacciones comerciales, requieres informes de transparencia sobre las donaciones o eres un artesano buscando alianza, ponte en contacto directo.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Nombre -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-neonBlue/10 p-3 rounded-lg text-neonBlue border border-neonBlue/20">
+                                <i class="fa-solid fa-user text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase font-bold tracking-wider">Nombre del Enlace</p>
+                                <p class="text-lg font-bold text-white">Elizabeth Merino Medel</p>
+                            </div>
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-goldPremium/10 p-3 rounded-lg text-goldPremium border border-goldPremium/20">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase font-bold tracking-wider">Correo Electrónico</p>
+                                <a href="mailto:eli.apoya.Mexico@gmail.com" class="text-lg font-semibold text-neonBlue hover:underline">eli.apoya.Mexico@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Dirección -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-neonBlue/10 p-3 rounded-lg text-neonBlue border border-neonBlue/20">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase font-bold tracking-wider">Dirección Física</p>
+                                <p class="text-base text-gray-200 font-medium">Corazón de México</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Mensajería -->
+                <div class="bg-customCardBg/90 p-8 rounded-2xl border border-gray-800 shadow-xl">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-paper-plane text-goldPremium"></i> Redactar un Mensaje</h3>
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Mensaje enviado correctamente al departamento de Elizabeth Merino.');">
+                        <div>
+                            <label class="text-xs text-gray-400 block mb-1 font-semibold">Tu Nombre</label>
+                            <input type="text" required class="w-full bg-customDarkBg border border-gray-700 rounded-lg p-3 text-sm focus:outline-none focus:border-neonBlue transition-colors" placeholder="Introduce tu nombre">
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-400 block mb-1 font-semibold">Tu Email</label>
+                            <input type="email" required class="w-full bg-customDarkBg border border-gray-700 rounded-lg p-3 text-sm focus:outline-none focus:border-neonBlue transition-colors" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-400 block mb-1 font-semibold">Contenido del Mensaje</label>
+                            <textarea rows="4" required class="w-full bg-customDarkBg border border-gray-700 rounded-lg p-3 text-sm focus:outline-none focus:border-neonBlue transition-colors" placeholder="Detalla tu consulta aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-neonBlue to-cyan-500 text-customDarkBg font-bold p-3 rounded-lg text-sm uppercase tracking-wider hover:brightness-110 transition-all shadow-md">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-customDarkBg border-t border-gray-800 py-8 text-center text-sm text-gray-500">
+        <p class="mb-2">© 2026 Fútbol Mundial. Solo para mayores de 18 años. Juega de manera responsable.</p>
+        <p class="text-xs text-neonBlue/60">Un solo mundo, una sola pasión. Conectados desde el Corazón de México.</p>
+    </footer>
+
+</body>
+</html>
